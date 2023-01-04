@@ -10,7 +10,7 @@ services:
     volumes:
       - ./app:/app/
     ports:
-      - "2000:9000"
+      - "2001:9000"
     entrypoint: ["/bin/sh", "-c", "composer install && php-fpm"]
   nginx-service:
     environment:
@@ -21,4 +21,4 @@ services:
     volumes:
       - ./app:/app/
     ports:
-      - "6001:80"
+      - "6002:80"

@@ -1,4 +1,4 @@
-FROM php:8.2-fpm-alpine as php-service
+FROM php:8.1-fpm-alpine as php-service
 
 ARG APP_ENV=dev
 ENV APP_ENV=$APP_ENV
