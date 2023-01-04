@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -e
+set -o pipefail
+pecl install "$1"
+docker-php-ext-enable "$1"
+rm -rf /tmp/pear
