@@ -15,7 +15,7 @@ COPY ./docker/php/php-fpm.conf /usr/local/etc/php-fpm.d/www.conf
 # Copy the application code
 COPY ./app /app
 
-RUN mkdir /app/var && chown -R www-data:www-data /app/var
+RUN mkdir -p /app/var && chown -R www-data:www-data /app/var
 RUN cd /app && composer install --prefer-dist --no-progress --no-interaction --no-scripts --no-dev
 RUN chown -R www-data:www-data /app
 

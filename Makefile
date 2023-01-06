@@ -15,3 +15,7 @@ cs-fix: ## Auto-fixes any style related code violations
 .PHONY: shell
 shell: ## Provides shell access to the running PHP container instance
 	$(COMPOSE) exec php-service /bin/sh
+
+.PHONY: test-ui
+test-ui: ## Provides shell access to the running PHP container instance
+	$(APP) bin/phpunit --testsuite=ui
