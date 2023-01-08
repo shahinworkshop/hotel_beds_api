@@ -5,7 +5,7 @@ namespace App\Tests\Ui;
 use Symfony\Bundle\FrameworkBundle\KernelBrowser;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-final class UiTestCase extends WebTestCase
+abstract class UiTestCase extends WebTestCase
 {
     protected KernelBrowser $client;
 
@@ -23,7 +23,7 @@ final class UiTestCase extends WebTestCase
                         'cognito:username' => 'admin@instapro.com',
                     ],
                 ],
-            ], true)
+            ])
         );
     }
 }
