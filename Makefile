@@ -19,3 +19,7 @@ shell: ## Provides shell access to the running PHP container instance
 .PHONY: test-ui
 test-ui: ## Provides shell access to the running PHP container instance
 	$(APP) bin/phpunit --testsuite=ui
+
+.PHONY: test-unit
+test-unit: ## Provides shell access to the running PHP container instance
+	$(APP) bin/phpunit --verbose --testsuite=unit
