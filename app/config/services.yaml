@@ -20,5 +20,14 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
 
+    App\Infrastructure\HttpClient\HotelBedsClient:
+        arguments:
+            - '%env(HOTEL_BEDS_API)%'
+            - '%env(HOTEL_BEDS_API_KEY)%'
+            - '%env(HOTEL_BEDS_SECRET_KEY)%'
+
+    App\Application\Query\ListOFRoomAvailability\ListOfRoomAvailabilityQuery:
+
+    App\Ui\Http\Controller\CheckAvailability\CheckAvailabilityRequestParser:
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
