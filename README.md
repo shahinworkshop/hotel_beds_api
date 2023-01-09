@@ -6,8 +6,6 @@ With thi application you can book a room in the selected hotel with the selected
 For this application I used the Hexagonal architecture and Symfony 6.2 with PHP 8.1
 I try to implement CQRS and DDD.
 
-But due to the extent of the project, because I wanted it to have a correct and usable structure, it was not completed completely at this specific time when I was also involved in the company's work.
-I hope that what has been delivered so far has an acceptable structure.
 
 # How to run
 
